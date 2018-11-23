@@ -1,0 +1,8 @@
+<li [ngClass]="(post.loveIts > 0)? 'list-group-item list-group-item-success':'list-group-item list-group-item-danger'" >
+  <span class="pull-right">{{post.created_at | date: 'short'}}</span>
+  <h4>{{post.title}}</h4>
+  <p>{{post.content}}</p>
+  <button (click)="onLove(post)" class="btn btn-success">Love It ({{post.loveIts}})</button>
+  <button (click)="onDontLove(post)" class="btn btn-danger">Don't love It</button>  
+  <button (click)="onRemovePost(post)" class="btn btn-danger pull-right" >Supprimer</button>
+</li>
